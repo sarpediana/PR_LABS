@@ -4,7 +4,8 @@
   "description": "laboratorul nr. 1",
   "main": "index.js",
   "scripts": {
-    "start": "node lab.js"
+    "start": "node lab.js",
+    "test": "node node_modules/mocha/bin/mocha.js"
   },
   "repository": {
     "type": "git",
