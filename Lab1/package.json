@@ -1,0 +1,15 @@
+{
+  "name": "lab1",
+  "version": "1.0.0",
+  "description": "laboratorul nr. 1",
+  "main": "index.js",
+  "scripts": {
+    "start": "node lab.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sarpediana/PR_LABS.git"
+  },
+  "author": "Sarpe Diana",
+  "license": "ISC"
+}
