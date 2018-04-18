@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        table,
+        th,
+        td {
+            border: 1px solid red;
+        }
+    </style>
+</head>
+<html lang="en">
+
+<head>
+    <% include ../partials/head %>
+</head>
+
+<body class="container">
+
+    <header>
+        <% include ../partials/header %>
+    </header>
+
+    <main>
+        <div class="jumbotron">
+            <p>Vremea din toata ?ara</p>
+        </div>
+    </main>
+<h1>
+    <%=raspuns.city.name%>
+</h1>
+<table id="skills">
+    <tr class="centered">
+        <th>data/ora</th>
+        <th>tempMax</th>
+        <th>tempMin</th>
+        <th>umiditatea</th>
+        <th>presiunea</th>
+        <th>starea timpului</th>
+    </tr>
+    <tr>
+        <td>
+            <%= raspuns.list[0].dt_txt%>
+        </td>
+        <td>
+            <%= Math.floor(raspuns.list[0].main.temp_max-273) %>
+        </td>
+        <td>
+            <%= Math.floor(raspuns.list[0].main.temp_min-273)  %>
+        </td>
+        <td>
+            <%= raspuns.list[0].main.humidity +'%'  %>
+        </td>
+        <td>
+            <%= raspuns.list[0].main.pressure +'%'  %>
+        </td>
+        <td>
+            <%= raspuns.list[0].weather[0].description %>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <%= raspuns.list[2].dt_txt%>
+        </td>
+        <td>
+            <%= Math.floor(raspuns.list[2].main.temp_max-273) %>
+        </td>
+        <td>
+            <%= Math.floor(raspuns.list[2].main.temp_min-273)  %>
+        </td>
+        <td>
+            <%= raspuns.list[2].main.humidity +'%'  %>
+        </td>
+        <td>
+            <%= raspuns.list[2].main.pressure +'%'  %>
+        </td>
+        <td>
+            <%= raspuns.list[2].weather[0].description %>
+        </td>
+    </tr>
+    <%for (let i=6; i<raspuns.list.length; i+=2){%>
+        <tr>
+            <td>
+                <%= raspuns.list[i].dt_txt%>
+            </td>
+            <td>
+                <%= Math.floor(raspuns.list[i].main.temp_max-273) %>
+            </td>
+            <td>
+                <%= Math.floor(raspuns.list[i].main.temp_min-273)  %>
+            </td>
+            <td>
+                <%= raspuns.list[i].main.humidity +'%'  %>
+            </td>
+            <td>
+                <%= raspuns.list[i].main.pressure +'%'  %>
+            </td>
+            <td>
+                <%= raspuns.list[i].weather[0].description %>
+            </td>
+        </tr>
+        <%}%>
+</table>
+</body>
+</html>
+</html>

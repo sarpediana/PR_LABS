@@ -2,7 +2,7 @@ let express = require('express');
 let app = express();
 let fs = require('fs');
 const request = require('request');
-
+app.set ('view engine', 'ejs');
 let categories;
 
 let optionsCategories = {
