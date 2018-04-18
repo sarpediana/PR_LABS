@@ -1,0 +1,25 @@
+{
+  "name": "lab1",
+  "version": "1.0.0",
+  "description": "laboratorul nr. 1",
+  "main": "index.js",
+  "scripts": {
+    "start": "node lab.js",
+    "test": "node node_modules/mocha/bin/mocha.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sarpediana/PR_LABS.git"
+  },
+  "author": "Sarpe Diana",
+  "license": "ISC",
+  "dependencies": {
+    "Promise": "^1.0.5",
+    "csv": "^2.0.0",
+    "express": "^4.16.2",
+    "http": "0.0.0",
+    "promise": "^8.0.1",
+    "request": "^2.83.0",
+    "ejs": "1.0.0"
+  }
+}
